@@ -1,0 +1,35 @@
+/* ================================= 
+  Footer Section
+==================================== */
+
+footer {
+	width: 90%;
+	@extend %zeroAutoMargins;
+	border-top: 3px solid $darksilver;
+	padding-top: 1rem;
+	padding-bottom: 5rem;
+	background-color: $aquablue;
+	color: $lightgrey;
+}
+
+.footer-name {
+	float: left;
+}
+
+.footer-link {
+	float: right;
+	/* use display: none when necessary */
+}
+
+.footer-link a {
+	text-decoration: none;
+	color: $lightgrey;
+}
+
+#bottom-wrapper {
+	background-color: $aquablue;
+}
+
+.footer-nav {
+	display: none;
+}

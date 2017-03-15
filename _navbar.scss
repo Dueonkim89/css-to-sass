@@ -1,0 +1,35 @@
+/* ================================= 
+  Nav Bar Layout
+==================================== */
+
+.name {
+	font-size: 3rem;
+	text-align: center;
+	@extend %noTopMargin;
+	padding-top: 1rem;
+	color: $lightgrey;
+}
+
+.main-nav  {
+	padding: 0 1.75rem;
+}
+
+.main-nav a {
+	display: block;
+	padding: 1.25rem 2rem;
+	color: $lightgrey;
+	font-size: 1.35rem;
+	background-color:  $lightblue;
+	border-radius: 5px;
+}
+
+
+.main-nav li {
+	display: block;
+	text-align: center;
+	padding-bottom: .5rem;
+}
+
+.header-container {
+	background-color: $aquablue;
+}
