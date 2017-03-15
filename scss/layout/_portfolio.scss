@@ -1,0 +1,45 @@
+/* ================================= 
+  Portfolio Section
+==================================== */
+
+.content-id {
+	margin-top: 0;
+	padding-top: 2.50rem;
+	padding-bottom: 0;
+}
+
+
+.portfolio {
+	margin-top: 0;
+	text-align: center;
+	background-color: #d6d6c2;
+	color: black;
+	padding-bottom: 2.50rem;
+}
+
+.marketing, .search, .travel, .map, .gallery, .calculator {
+	max-width: 90%;
+	/* display: block; */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marketing {
+	margin-top: 2.50rem;
+}
+
+.portfolio  p {
+	text-align: center;
+	font-size: 1.35rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.marketing-headline, .search-headline, .travel-headline, .map-headline, .photo-gallery, .calc-section {
+	margin-top: 2.25rem;
+}
+
+.search, .travel, .map, .gallery, .calculator  {
+	margin-top: 1.5rem;
+}
