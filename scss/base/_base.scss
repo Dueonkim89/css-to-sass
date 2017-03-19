@@ -10,15 +10,26 @@ body {
 	font-family: 'Bubblegum Sans', cursive;
 	margin: 0;  /* this is how you get rid of white framing around site. */
 	padding: 0;
-	background-color: #00b3b3;
+	background-color: $aquablue;
 	
 }
 
 a {
-	text-decoration: none;
+	@extend %anchorDecoration;
+
+	&:hover {
+		@media #{$tablet-view} {
+			color: $black;
+		}
+	}
 }
 
 img {
 	max-width: 100%;
 }
 
+.clearfix::after { 		/* ABSOLUTE NECESSITY */
+		content: " ";
+		display: table;
+		clear: both;
+}

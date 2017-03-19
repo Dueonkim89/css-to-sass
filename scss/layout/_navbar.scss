@@ -2,34 +2,95 @@
   Nav Bar Layout
 ==================================== */
 
-.name {
-	font-size: 3rem;
+.name { 
+	@include first-mixin(3rem, $lightgrey);
 	text-align: center;
-	margin-top: 0;
+	@extend %noTopMargin;
 	padding-top: 1rem;
-	color: #f5f5f0;
+	
+	@media #{$tablet-view} {
+		padding-top: 2.25rem;
+		font-size: 3.25rem;
+		margin-bottom: 0;
+		padding-bottom: 1rem;
+	}
+	
+	@media #{$desktop-view} {
+		margin-bottom: 0;
+		float: left;
+		padding-top: 0;
+		margin-left: .75rem;
+	}
 }
 
 .main-nav  {
 	padding: 0 1.75rem;
+	
+	@media #{$tablet-view} {
+		text-align: center;
+	}
+	
+	@media #{$desktop-view} {
+		float: right;
+		padding-left: 0;
+		padding-right: 0;
+		margin-right: .75rem;
+	}
 }
 
-.main-nav a {
-	display: block;
+.main-nav a { 
+	@include first-mixin(1.35rem, $lightgrey);
+	@extend %block;
 	padding: 1.25rem 2rem;
-	color: #f5f5f0;
-	font-size: 1.35rem;
-	background-color:  #99ccff;
+	background-color:  $lightblue;
 	border-radius: 5px;
+	
+	@media #{$tablet-view} { 
+		@include second-mixin(1.75rem, 1rem, 1rem);
+		background-color: $aquablue;
+		padding-top: .75rem;
+	}
+	
+	@media #{$desktop-view} { 
+		@include second-mixin(2rem, .75rem, 0);
+		background-color: $aquablue;
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+	}
 }
-
 
 .main-nav li {
-	display: block;
+	@extend %block;
 	text-align: center;
 	padding-bottom: .5rem;
+	
+	@media #{$tablet-view} {
+		display: inline-block;
+		margin-left: .75rem;
+	}
+	
+	@media #{$desktop-view} {
+		display: inline-block;
+	}
 }
 
 .header-container {
-	background-color: #00b3b3;
+	background-color: $aquablue;
+	
+	@media #{$tablet-view} { 
+		padding-bottom: 1.75rem;
+	}
+	
+	@media #{$desktop-view} {
+		max-width: 90%;
+		margin: 0 auto;
+		padding: 1px 0;
+	}
+}
+
+header {
+	@media #{$desktop-view} {
+		padding-top: 2.25rem;
+		padding-bottom: 2.75rem;
+	}
 }

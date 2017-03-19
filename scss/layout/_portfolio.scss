@@ -3,41 +3,87 @@
 ==================================== */
 
 .content-id {
-	margin-top: 0;
+	@extend %noTopMargin;
 	padding-top: 2.50rem;
 	padding-bottom: 0;
+	
+	@media #{$tablet-view} { 
+		font-size: 3.25rem;
+		padding-top: 3rem;
+	}
 }
 
-
 .portfolio {
-	margin-top: 0;
+	@extend %noTopMargin;
 	text-align: center;
-	background-color: #d6d6c2;
-	color: black;
+	background-color: $silver;
+	color: $black;
 	padding-bottom: 2.50rem;
+	
+	@media #{$desktop-view} { 
+		max-width: 90%;
+		margin: 0 auto;
+	}
 }
 
 .marketing, .search, .travel, .map, .gallery, .calculator {
 	max-width: 90%;
 	/* display: block; */
-
-    margin-left: auto;
-    margin-right: auto;
+    @extend %autoMargins;
+	
+	@media #{$tablet-view} { 
+		@include third-mixin(100%, 1rem, 1rem);
+	}
 }
 
-.marketing {
+.marketing { 
 	margin-top: 2.50rem;
+	
+	@media #{$tablet-view} { 
+		margin-top: 1.5rem;
+	}
 }
 
-.portfolio  p {
-	text-align: center;
-	font-size: 1.35rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+.portfolio  p {   
+	@include second-mixin(1.35rem, 1rem, 1rem, $textAlign: center);
+	
+	@media #{$tablet-view} {
+		font-size: 1.50rem;
+	}
+	
+	@media #{$desktop-view} {
+		font-size: 1.75rem;
+	}
 }
 
 .marketing-headline, .search-headline, .travel-headline, .map-headline, .photo-gallery, .calc-section {
 	margin-top: 2.25rem;
+	
+	@media #{$tablet-view} {
+		font-size: 2.25rem;
+	}
+}
+
+#marketing, #search, #travel, #map, #gallery, #calculator {
+	@media #{$tablet-view} {
+		float: left;
+		width: 50%;
+		margin-bottom: 1.25rem;
+	}
+	
+	@media #{$desktop-view} {
+		width: 33.33%;
+	}
+}
+
+#travel {
+	@media #{$tablet-view} {
+		clear: left;
+	}
+	
+	@media #{$desktop-view} { /* fixes the issue with not fitting in the row.*/
+		clear: right;
+	}
 }
 
 .search, .travel, .map, .gallery, .calculator  {

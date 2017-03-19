@@ -1,0 +1,18 @@
+@mixin first-mixin($size, $color, $weight: null) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin second-mixin($size, $padLeft, $padRight, $textAlign: null) {
+	font-size: $size;
+	padding-left: $padLeft;
+	padding-right: $padRight;
+	text-align: $textAlign;
+}
+
+@mixin third-mixin($maxWidth, $padLeft, $padRight) {
+	max-width: $maxWidth;
+	padding-left: $padLeft;
+	padding-right: $padRight;
+}
